@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserProfile = () => {
+const AdminProfile = () => {
   return (
     <div className="flex items-center">
       <img
@@ -13,4 +13,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default AdminProfile;

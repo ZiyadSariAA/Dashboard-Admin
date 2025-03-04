@@ -1,0 +1,48 @@
+[
+    {
+      "id": "1",
+      "name": "Ali Ahmed",
+      "email": "ali.ahmed@example.com",
+      "role": "student",
+      "avatar": "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Hassan Al-Farsi",
+      "email": "hassan.farsi@example.com",
+      "role": "advisor",
+      "avatar": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "3",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "role": "admin",
+      "avatar": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
+    }
+,
+    {
+        "id": "3",
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "role": "admin",
+        "avatar": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
+      }
+,
+      {
+        "id": "3",
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "role": "admin",
+        "avatar": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
+      }
+,
+      {
+        "id": "3",
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "role": "admin",
+        "avatar": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
+      }
+  ]
+  
