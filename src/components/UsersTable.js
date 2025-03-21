@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Use useNavigate for navigation
 import usersData from "../data/users.json"; // Import users from JSON
 
 const UsersTable = () => {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate(); // ✅ React Router navigation hook
 
   useEffect(() => {
     setUsers(usersData); // Load users from JSON
   }, []);
+
+  // ✅ Function to navigate when clicking a row
+  const handleRowClick = (id) => {
+    navigate(`/users/${id}`);
+  };
 
   return (
     <div className="overflow-x-auto">
@@ -21,10 +28,14 @@ const UsersTable = () => {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr key={user.id} className="text-center">
+            <tr
+              key={user.id}
+              className="text-center cursor-pointer hover:bg-gray-100 transition"
+              onClick={() => handleRowClick(user.id)} // ✅ Click anywhere on the row
+            >
               <td className="p-3 border border-gray-300">
                 <img
-                  src={user.avatar || "/default-avatar.png"} // Use user avatar or default
+                  src={user.avatar || "/default-avatar.png"}
                   alt={user.name}
                   className="w-10 h-10 rounded-full mx-auto"
                 />
