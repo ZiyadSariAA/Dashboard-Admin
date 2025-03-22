@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import { FaChartBar, FaUsers, FaCog, FaSignOutAlt } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -25,17 +25,14 @@ const Sidebar = () => {
   );
 };
 
-// Sidebar Item Component (Reusable)
-const SidebarItem = ({ icon, text, link }) => {
-  return (
-    <Link
-      to={link} // Use Link instead of <a href="#">
-      className="flex items-center p-3 text-gray-900 rounded-lg hover:bg-gray-200 transition"
-    >
-      <span className="text-lg">{icon}</span>
-      <span className="ml-3 text-sm">{text}</span>
-    </Link>
-  );
-};
+const SidebarItem = ({ icon, text, link }) => (
+  <Link
+    to={link}
+    className="flex items-center p-3 text-gray-900 rounded-lg hover:bg-gray-200 transition"
+  >
+    <span className="text-lg">{icon}</span>
+    <span className="ml-3 text-sm">{text}</span>
+  </Link>
+);
 
 export default Sidebar;
