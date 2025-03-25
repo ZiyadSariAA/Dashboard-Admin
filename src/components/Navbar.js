@@ -1,32 +1,32 @@
+// src/components/Navbar.js
+
 import React from "react";
-import {  FaPaperPlane, FaBell } from "react-icons/fa";
-import SearchBar from "./ui/SearchBar";
-import IconButton from "./ui/IconButton";
-import UserProfile from "./ui/AdminProfile";
+import { FaBell, FaPaperPlane } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ onToggleSidebar }) => {
   return (
-    <div className="bg-white border-b-2 border-gray-200">
-      <div className="flex justify-between items-center h-16 px-4">
-    
-        {/* Logo */}
-        <img
-          src="https://pbs.twimg.com/profile_images/856590595783110656/4CVlrO1z_200x200.jpg"
-          className="h-8 w-auto"
-          alt="Logo"
-        />
-
-        {/* Search Bar */}
-        <SearchBar />
-
-        {/* Icons & Profile */}
-        <div className="flex items-center space-x-4">
-          <IconButton icon={<FaPaperPlane />} />
-          <IconButton icon={<FaBell className="w-6 h-6" />} badge="2" />
-          <UserProfile />
-        </div>
+    <nav className="flex items-center justify-between px-4 py-2 border-b shadow-sm bg-white">
+      <div className="flex items-center space-x-4">
+        <button
+          className="lg:hidden p-2"
+          onClick={onToggleSidebar}
+          aria-label="Toggle Sidebar"
+        >
+          ☰
+        </button>
+        <span className="text-xl font-bold">Admin Panel</span>
       </div>
-    </div>
+
+      <div className="flex items-center space-x-4">
+        <FaPaperPlane />
+        <FaBell />
+        <img
+          src="https://i.pravatar.cc/40"
+          alt="User"
+          className="w-8 h-8 rounded-full"
+        />
+      </div>
+    </nav>
   );
 };
 

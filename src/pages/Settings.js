@@ -1,38 +1,32 @@
-import React, { useState } from "react";
+// src/pages/Settings.js
+import React from "react";
+import { FaPaintBrush, FaUserCog } from "react-icons/fa";
 
 const Settings = () => {
-  // State for theme selection
-  const [theme, setTheme] = useState("light");
-
-  // Handle theme change
-  const handleThemeChange = (event) => {
-    setTheme(event.target.value);
-  };
-
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-semibold mb-4">Settings</h1>
+    <div className="p-6 space-y-6">
+      <h1 className="text-3xl font-bold">Settings</h1>
 
-      {/* Theme Selection */}
-      <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold mb-2">Appearance</h2>
-        <label className="block mb-2">Select Theme:</label>
-        <select
-          value={theme}
-          onChange={handleThemeChange}
-          className="border border-gray-300 rounded px-3 py-2"
-        >
-          <option value="light">Light Mode</option>
-          <option value="dark">Dark Mode</option>
-        </select>
+      {/* Appearance Settings */}
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaPaintBrush className="text-indigo-500" />
+          Appearance
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          Theme options will go here (light/dark toggle)
+        </p>
       </div>
 
       {/* Account Settings */}
-      <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-md mt-4">
-        <h2 className="text-lg font-semibold mb-2">Account</h2>
-        <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
-          Logout
-        </button>
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-xl font-semibold flex items-center gap-2">
+          <FaUserCog className="text-purple-500" />
+          Account Settings
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          Coming soon: update email/password and logout
+        </p>
       </div>
     </div>
   );
