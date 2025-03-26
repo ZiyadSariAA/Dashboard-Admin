@@ -1,9 +1,11 @@
+// src/components/UsersTable.js
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../firebase";
 
-const UsersTable = () => {
+const UsersTable = ({ searchTerm }) => {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
@@ -12,7 +14,7 @@ const UsersTable = () => {
       try {
         const snapshot = await getDocs(collection(firestore, "users"));
         const userList = snapshot.docs.map((doc) => ({
-          id: doc.id, // ✅ Use document ID
+          id: doc.id,
           ...doc.data(),
         }));
         setUsers(userList);
@@ -23,6 +25,10 @@ const UsersTable = () => {
 
     fetchUsers();
   }, []);
+
+  const filteredUsers = users.filter((user) =>
+    user.name?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="overflow-x-auto">
@@ -37,10 +43,10 @@ const UsersTable = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {filteredUsers.map((user) => (
             <tr
               key={user.id}
-              onClick={() => navigate(`/users/${user.id}`)} // ✅ Use doc ID
+              onClick={() => navigate(`/users/${user.id}`)}
               className="text-center cursor-pointer hover:bg-gray-100 transition"
             >
               <td className="p-3 border border-gray-300">

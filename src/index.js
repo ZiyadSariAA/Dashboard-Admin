@@ -4,12 +4,15 @@ import { BrowserRouter } from "react-router-dom"; // ✅ Import BrowserRouter
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { AppProvider } from "./context/AppProvider"; // ✅ Import AppProvider
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter> {/* ✅ Wrap App inside BrowserRouter */}
-      <App />
+    <BrowserRouter> {/* Wrap App inside BrowserRouter */}
+      <AppProvider> {/* Wrap App inside AppProvider */}
+        <App />
+      </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
