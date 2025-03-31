@@ -1,3 +1,4 @@
+// src/components/Sidebar.js
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -29,11 +30,12 @@ const Sidebar = () => {
         <SidebarItem icon={<FaLayerGroup />} text="Groups" link="/groups" />
         <SidebarItem icon={<FaFileAlt />} text="Posts" link="/posts" />
         <SidebarItem icon={<FaExclamationTriangle />} text="Reports" link="/reports" />
-        <SidebarItem icon={<FaBullhorn />} text="Ads Manager" link="/ads" />
+        <SidebarItem icon={<FaBullhorn />} text="Ads Manager" link="/ads-manager" />
         <SidebarItem icon={<FaComments />} text="Chat" link="/chat" />
-        <SidebarItem icon={<FaRobot />} text="AI Assistant" link="/ai" />
+        {/* Updated AI Assistant link to match the route */}
+        <SidebarItem icon={<FaRobot />} text="AI Assistant" link="/ai-assistant" />
         <SidebarItem icon={<FaBell />} text="Notifications" link="/notifications" />
-        <SidebarItem icon={<FaWpforms />} text="Forms Builder" link="/forms" />
+        <SidebarItem icon={<FaWpforms />} text="Forms Builder" link="/forms-builder" />
         <SidebarItem icon={<FaCog />} text="Settings" link="/settings" />
       </nav>
     </div>

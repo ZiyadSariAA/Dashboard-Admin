@@ -11,6 +11,7 @@
     "daisyui": "^4.12.23",
     "firebase": "^11.5.0",
     "framer-motion": "^12.5.0",
+    "marked": "^15.0.7",
     "react": "^19.0.0",
     "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.0.0",
